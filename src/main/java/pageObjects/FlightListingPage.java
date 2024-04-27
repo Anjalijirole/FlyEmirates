@@ -18,16 +18,36 @@ private WebDriver driver;
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//div[contains(@class,\"ts-fbr-flight-list__header-title\")]/h2")
-	private List<WebElement> HeaderOfListedFlights;	
+	//@FindBy(xpath="//div[contains(@class,\"ts-fbr-flight-list__header-title\")]/h2")
+	//private List<WebElement> HeaderOfListedFlights;	
 	
 	@FindBy(xpath="//div[contains(@class,\"ts-fbr-flight-list__header-date\")]")
-	private List<WebElement> DateOFtheListedFlights;
+	private WebElement DateOFtheListedFlights;
 	
 	@FindBy(xpath="//div[contains(@class,\"ts-fie__right-side\")]/p/span/following-sibling::span")
 	private List<WebElement> DestinationOfListedFlights;
 	
-	//Just need to use the above xpaths to verify with the given data.
-	
+	public String GetFlightDate()
+	{
+		String dateOfFlight = DateOFtheListedFlights.getText();
+		return dateOfFlight;
+	}
+	public boolean IsDestinationInFlightListEqualToSearchParam(String destinationSearchParam)
+	{
+		boolean isDestinationValid=false;
+		for(WebElement destinationOfListedFlight:DestinationOfListedFlights )
+		{
+			if(destinationOfListedFlight.getText().equals(destinationSearchParam))
+			{
+				isDestinationValid=true;
+			}
+			else if(destinationOfListedFlight.getText().trim().length() > 0)
+			{
+				isDestinationValid=false;
+			}
+		}
+		return isDestinationValid;
+	}
 
 }
+    

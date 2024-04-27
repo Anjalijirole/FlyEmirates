@@ -29,8 +29,6 @@ private WebDriver driver;
 	@FindBy(xpath="//li[contains(@class,'location__item')]")
 	private WebElement listOfDestinations;
 	
-
-	
 	@FindBy(xpath="//label[@class='checkbox flexible-date']/input")
 	private WebElement flexiDateCheckbox;
 	
@@ -49,19 +47,20 @@ private WebDriver driver;
 		acceptBtn.click();
 	}
 	
-	public void SearchFlight(String arrivalAirportCode)
+	public void SearchFlight(String arrivalAirportCode, String inputDate)
 	{
-		waitForWebElementToAppear(arrivalAirportInput);
+		waitForWebElementIsClickable(arrivalAirportInput);
 		arrivalAirportInput.click();
 		arrivalAirportInput.sendKeys(arrivalAirportCode);
 		WebElement element = listOfDestinations.findElement(By.xpath("//div/p[contains(text(),'"+ arrivalAirportCode +"')and contains(@class,'highlight')]"));
-		waitForWebElementToAppear(element);
+		waitForWebElementIsClickable(element);
 		element.click();
 	
 		flexiDateCheckbox.click();
 		oneWayCheckbox.click();
 		DatePicker dp = new DatePicker(driver);
-		dp.datePicker(driver,"10","June","2024");
+		dp.datePicker(driver,inputDate);
+		waitForWebElementIsClickable(searchFlightButton);
 		searchFlightButton.click();
 		
 	}

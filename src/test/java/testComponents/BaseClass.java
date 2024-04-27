@@ -40,7 +40,8 @@ public class BaseClass {
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
 				: prop.getProperty("browser");
 
-		if (browserName.contains("chrome")) {
+		if (browserName.contains("chrome")) 
+		{
 			ChromeOptions options = new ChromeOptions();
 			if (browserName.contains("headless")) {
 				options.addArguments("headless");
@@ -53,8 +54,8 @@ public class BaseClass {
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 		}
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
 		return driver;
 	}
 
@@ -70,7 +71,7 @@ public class BaseClass {
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
