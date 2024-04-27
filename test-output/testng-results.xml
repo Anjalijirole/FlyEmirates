@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-27T17:21:49 IST" name="Suite" finished-at="2024-04-27T17:22:45 IST" duration-ms="55842">
+  <suite started-at="2024-04-27T17:58:26 IST" name="Suite" finished-at="2024-04-27T17:59:26 IST" duration-ms="59844">
     <groups>
     </groups>
-    <test started-at="2024-04-27T17:21:49 IST" name="Test" finished-at="2024-04-27T17:22:45 IST" duration-ms="55842">
+    <test started-at="2024-04-27T17:58:26 IST" name="Test" finished-at="2024-04-27T17:59:26 IST" duration-ms="59844">
       <class name="tests.SearchErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.SearchErrorValidations@6eb2384f]" started-at="2024-04-27T17:22:38 IST" name="launchApplication" finished-at="2024-04-27T17:22:42 IST" duration-ms="4146" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.SearchErrorValidations@6eb2384f]" started-at="2024-04-27T17:59:19 IST" name="launchApplication" finished-at="2024-04-27T17:59:23 IST" duration-ms="4089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="ErrorValidation()[pri:0, instance:tests.SearchErrorValidations@6eb2384f]" started-at="2024-04-27T17:22:42 IST" name="ErrorValidation" finished-at="2024-04-27T17:22:45 IST" duration-ms="2157" status="PASS">
+        <test-method signature="ErrorValidation()[pri:0, instance:tests.SearchErrorValidations@6eb2384f]" started-at="2024-04-27T17:59:23 IST" name="ErrorValidation" finished-at="2024-04-27T17:59:25 IST" duration-ms="2013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchErrorValidations@6eb2384f]" started-at="2024-04-27T17:22:45 IST" name="tearDown" finished-at="2024-04-27T17:22:45 IST" duration-ms="206" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchErrorValidations@6eb2384f]" started-at="2024-04-27T17:59:25 IST" name="tearDown" finished-at="2024-04-27T17:59:26 IST" duration-ms="232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.SearchErrorValidations -->
       <class name="tests.TestRunner">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:21:49 IST" name="launchApplication" finished-at="2024-04-27T17:21:54 IST" duration-ms="4692" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:58:26 IST" name="launchApplication" finished-at="2024-04-27T17:58:32 IST" duration-ms="5814" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="Search(java.util.HashMap)[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:21:54 IST" name="Search" data-provider="getData" finished-at="2024-04-27T17:22:14 IST" duration-ms="19720" status="PASS">
+        <test-method signature="Search(java.util.HashMap)[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:58:32 IST" name="Search" data-provider="getData" finished-at="2024-04-27T17:58:54 IST" duration-ms="21980" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,15 +36,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:22:14 IST" name="tearDown" finished-at="2024-04-27T17:22:14 IST" duration-ms="585" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:58:54 IST" name="tearDown" finished-at="2024-04-27T17:58:54 IST" duration-ms="353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:22:14 IST" name="launchApplication" finished-at="2024-04-27T17:22:19 IST" duration-ms="4528" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:58:54 IST" name="launchApplication" finished-at="2024-04-27T17:58:59 IST" duration-ms="4880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="Search(java.util.HashMap)[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:22:19 IST" name="Search" data-provider="getData" finished-at="2024-04-27T17:22:38 IST" duration-ms="19233" status="PASS">
+        <test-method signature="Search(java.util.HashMap)[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:58:59 IST" name="Search" data-provider="getData" finished-at="2024-04-27T17:59:19 IST" duration-ms="19946" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:22:38 IST" name="tearDown" finished-at="2024-04-27T17:22:38 IST" duration-ms="337" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestRunner@27eedb64]" started-at="2024-04-27T17:59:19 IST" name="tearDown" finished-at="2024-04-27T17:59:19 IST" duration-ms="347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

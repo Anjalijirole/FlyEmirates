@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: tests.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 40.618 s <<< FAILURE! - in tests.TestRunner
+Search(tests.TestRunner)  Time elapsed: 9.352 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+no such execution context
+  (Session info: chrome=123.0.6312.123)
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [722b9cfbcbf6f9f3568c650d2ca55f4a, clickElement {id=f.183F8F2D6D2384DE341D9902085BDF95.d.7DB0C8D9227D1D053A9A43DB215A4217.e.382}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\veeru\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54689}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54689/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (722b9cfbcbf6f9f3568c650d2ca55f4a)] -> xpath: //button/span[contains(text(),'Search flights')]]
+Session ID: 722b9cfbcbf6f9f3568c650d2ca55f4a
+	at tests.TestRunner.Search(TestRunner.java:27)
+
