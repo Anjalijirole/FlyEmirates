@@ -37,6 +37,8 @@ The Flight Search Automation project aims to automate the process of searching f
   cd FlyEmirates
 3. Run the script:
    mvn clean test
+  OR
+   Open eclipse and project in it ,navigate to testng.xml and run the testng.xml file.
 
 # Technologies Used
 * Java: Programming language used for automation and scripting.
