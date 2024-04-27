@@ -93,7 +93,6 @@ private WebElement nextMonthButton;
 		List<WebElement> currentYearsDisplayed = driver.findElements(By.xpath("//div[contains(@class,'label-year')]"));
 		for(WebElement currentYear:currentYearsDisplayed)
 		{
-			System.out.println(currentYear.getText());
 			if(currentYear.getText().equalsIgnoreCase(year))
 			{
 				return true;

@@ -23,6 +23,9 @@ private WebDriver driver;
 	@FindBy(xpath="//button[@id='onetrust-accept-btn-handler']")
 	private WebElement acceptBtn;
 	
+	@FindBy(xpath="//button/span[text()='Continue']")
+	private WebElement continueBtn;
+	
 	@FindBy(name="Arrival airport")
 	private WebElement arrivalAirportInput;
 	
@@ -33,10 +36,19 @@ private WebDriver driver;
 	private WebElement flexiDateCheckbox;
 	
 	@FindBy(xpath="//label[@class='checkbox one-way']/input")
-	private WebElement oneWayCheckbox;
+	private WebElement oneWayCheckbox;   
 	
 	@FindBy(xpath="//button/span[contains(text(),'Search flights')]")
 	private WebElement searchFlightButton;
+	
+	@FindBy(xpath="//div[@class='grid__item error-wrapper visible']/div[@class='widget__inline__error']/ul[@class='widget__inline__error_listing']/li/p[contains(@class,'destination')]")
+	private WebElement arrivalAirportErrorMesg;
+	
+	@FindBy(xpath="//div[@class='grid__item error-wrapper visible']/div[@class='widget__inline__error']/ul[@class='widget__inline__error_listing']/li/p[contains(@class,'departure')]")
+	private WebElement departureDateErrorMsg;
+	
+	@FindBy(xpath="//div[@class='grid__item error-wrapper visible']/div[@class='widget__inline__error']/ul[@class='widget__inline__error_listing']/li/p[contains(@class,'return')]")
+	private WebElement returnDateErrorMsg;
 	
 	public void Goto() {
 		driver.get("https://www.emirates.com/ae");
@@ -50,21 +62,53 @@ private WebDriver driver;
 	public void SearchFlight(String arrivalAirportCode, String inputDate)
 	{
 		waitForWebElementIsClickable(arrivalAirportInput);
-		arrivalAirportInput.click();
+		Click(arrivalAirportInput);
 		arrivalAirportInput.sendKeys(arrivalAirportCode);
-		WebElement element = listOfDestinations.findElement(By.xpath("//div/p[contains(text(),'"+ arrivalAirportCode +"')and contains(@class,'highlight')]"));
-		waitForWebElementIsClickable(element);
-		element.click();
+		WebElement arrivalAirportDropdown = listOfDestinations.findElement(By.xpath("//div/p[contains(text(),'"+ arrivalAirportCode +"')and contains(@class,'highlight')]"));
+		waitForWebElementIsClickable(arrivalAirportDropdown);
+		Click(arrivalAirportDropdown);
 	
-		flexiDateCheckbox.click();
-		oneWayCheckbox.click();
+		Click(flexiDateCheckbox);
+		Click(oneWayCheckbox);
 		DatePicker dp = new DatePicker(driver);
 		dp.datePicker(driver,inputDate);
 		waitForWebElementIsClickable(searchFlightButton);
-		searchFlightButton.click();
+		Click(searchFlightButton);
 		
 	}
-
+	
+	public void SearchErrorValidation() 
+	{
+		waitForWebElementIsClickable(continueBtn);
+		Click(continueBtn);
+		waitForWebElementIsClickable(searchFlightButton);
+		Click(searchFlightButton);
+		
+		}
+	
+	public String ErrorMsgArrivalAirport()
+	{
+		String arrivalAirportMsg=arrivalAirportErrorMesg.getText();
+		return arrivalAirportMsg;
+	}
+	
+	public String ErrorMsgDepartureDate()
+	{
+		String departureDaterMsg=departureDateErrorMsg.getText();
+		return departureDaterMsg;
+	}
+	
+	public String ErrorMsgReturnDate()
+	{
+		String returnDateMsg=returnDateErrorMsg.getText();
+		return returnDateMsg;
+	}
+	
+	private void Click(WebElement element)
+	{
+		element.click();
+	}
+    
 	
 	
 	

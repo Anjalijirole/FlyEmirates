@@ -24,14 +24,11 @@ public class TestRunner extends BaseClass{
 		LandingPage landingPage = new LandingPage(driver);
 		String arrivalAirportCode = searchParam.get("arrivalAirportCode");
 		String arrivalDate = searchParam.get("arrivalDate");
-		System.out.print(searchParam.get("arrivalDate"));
 		landingPage.SearchFlight(arrivalAirportCode,arrivalDate);
 		ResultByPricePage resultByPricePage = new ResultByPricePage(driver);
 		resultByPricePage.ClickOnContinue();
 		DatePicker datePicker = new DatePicker(driver);
 		FlightListingPage flightListingPage = new FlightListingPage(driver);
-		System.out.println(flightListingPage.GetFlightDate());
-		System.out.println(datePicker.convertToLongFormat(arrivalDate));
 		Assert.assertEquals(flightListingPage.GetFlightDate(), datePicker.convertToLongFormat(arrivalDate));
 		Assert.assertTrue(flightListingPage.IsDestinationInFlightListEqualToSearchParam(arrivalAirportCode));
 		
