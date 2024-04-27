@@ -57,3 +57,7 @@ The Flight Search Automation project aims to automate the process of searching f
 |org.seleniumhq.selenium        | 4.16.1    |
 |jackson-databind               | 2.16.0    |
 
+# Test Output Screenshot
+![image](https://github.com/Anjalijirole/FlyEmirates/assets/105169120/d829fbe4-cee8-4dc8-bef9-9d81e7a23e7e)
+
+
